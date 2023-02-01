@@ -20,6 +20,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(conjugate_complex((3, -8)), (3, 8))
         self.assertEqual(conjugate_complex((-5, -2)), (-5, 2))
 
+    def test_substraction(self):
+        self.assertEqual(substraction((4, 3), (5, -2)), (-1, 5))
+        self.assertEqual(substraction((7, 2), (-5, -4)), (12, 6))
+
+    def test_division(self):
+        self.assertEqual(division((20, -4), (3, 2)), (4, -4))
+        self.assertEqual(division((4, 2), (-1, 1)), (-1, -3))
+
 
 if __name__ == "__main__":
     unittest.main()
