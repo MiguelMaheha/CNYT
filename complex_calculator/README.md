@@ -1,6 +1,8 @@
 # CNYT Complex Calculator
 This library offers functions to work with Complex Numbers in Python.
 
+Complex numbers are modelled as tuples. So if you want to pass a complex number 6 + 3i to a method you should pass it as (6, 3)
+
 They enable the client to perform the following operations
 1. Addition
 2. Substraction
