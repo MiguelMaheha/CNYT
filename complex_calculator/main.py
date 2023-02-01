@@ -29,6 +29,15 @@ def division(c1: tuple, c2: tuple) -> tuple:
     return (real, imaginary)
 
 
+def cartesian_to_polar(c: tuple) -> tuple:
+    r = modulus_complex(c)
+    theta = math.degrees(math.atan(c[1] / c[0]))
+    return (r, theta)
+
+def polar_to_cartesian(c: tuple) -> tuple:
+    return (c[0] * math.cos(c[1]), c[0] * math.sin(c[1]))
+
+
 def print_complex(c: tuple):
     print(f"{c[0]} + {c[1]}i")
 

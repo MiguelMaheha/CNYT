@@ -28,6 +28,15 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(division((20, -4), (3, 2)), (4, -4))
         self.assertEqual(division((4, 2), (-1, 1)), (-1, -3))
 
+    def test_cartesian_to_polar(self):
+        self.assertEqual(cartesian_to_polar((3, -8)), (modulus_complex((3, -8)), math.degrees(math.atan(-8 / 3))))
+        self.assertEqual(cartesian_to_polar((-5, -2)), (modulus_complex((-5, -2)), math.degrees(math.atan(-2 / -5))))
+
+    def test_polar_to_cartesian(self):
+        self.assertEqual(polar_to_cartesian((3, -8)), (3 * math.cos(-8), 3 * math.sin(-8)))
+        self.assertEqual(polar_to_cartesian((-5, -2)), (-5 * math.cos(-2), -5 * math.sin(-2)))
+
+
 
 if __name__ == "__main__":
     unittest.main()
