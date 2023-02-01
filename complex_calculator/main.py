@@ -38,6 +38,10 @@ def polar_to_cartesian(c: tuple) -> tuple:
     return (c[0] * math.cos(c[1]), c[0] * math.sin(c[1]))
 
 
+def phase(c: tuple) -> float:
+    return math.atan2(c[1], c[0])
+
+
 def print_complex(c: tuple):
     print(f"{c[0]} + {c[1]}i")
 

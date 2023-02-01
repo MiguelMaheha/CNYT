@@ -36,6 +36,10 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(polar_to_cartesian((3, -8)), (3 * math.cos(-8), 3 * math.sin(-8)))
         self.assertEqual(polar_to_cartesian((-5, -2)), (-5 * math.cos(-2), -5 * math.sin(-2)))
 
+    def test_phase(self):
+        self.assertEqual(phase((3, -8)), math.atan2(-8, 3))
+        self.assertEqual(phase((-5, -2)), math.atan2(-2, -5))
+
 
 
 if __name__ == "__main__":
