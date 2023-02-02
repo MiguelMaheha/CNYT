@@ -9,7 +9,7 @@ def multiply_complex(c1: tuple, c2: tuple) -> tuple:
 
 
 def modulus_complex(c: tuple) -> float:
-    return abs(math.sqrt((c[0]) ** 2 + (c[1]) ** 2))
+    return abs(math.sqrt(c[0] ** 2 + c[1] ** 2))
 
 
 def conjugate_complex(c: tuple) -> tuple:
@@ -31,7 +31,7 @@ def division(c1: tuple, c2: tuple) -> tuple:
 
 def cartesian_to_polar(c: tuple) -> tuple:
     r = modulus_complex(c)
-    theta = math.degrees(math.atan(c[1] / c[0]))
+    theta = math.atan(c[1] / c[0])
     return (r, theta)
 
 def polar_to_cartesian(c: tuple) -> tuple:
